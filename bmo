@@ -1,0 +1,12 @@
+#!/bin/bash
+# BMO push helper
+# Usage: ./bmo [commit message]
+
+msg="${1:-bmo save}"
+
+echo "BMO: Pushing to GitHub..."
+git add -A && \
+git commit -m "$msg" && \
+git push && \
+echo "BMO: Done! ✧" || \
+echo "BMO: Something went wrong."
